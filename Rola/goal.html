@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>توارُث Tawaruth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="sidebar-container"></div>
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-container').innerHTML = data;
+      });
+  </script>
+  <header>
+    <div class="logo">
+      <img src="img/thumbnail_PHOTO-2025-04-27-14-14-09.jpg" alt="شعارالموقع" />
+      <div class="site-name">
+        <span class="arabic-name"><strong>توارُث</strong></span>
+        <hr />
+        <span class="english-name">Tawaruth</span>
+      </div>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="indx.html">
+          <h2>الرئيسية</h2>
+        </a></li>
+      <ul>
+        <li><a href="goal.html"> هدف المشروع</a></li>
+        <li><a href="ourmsg.html">رسالتنا</a></li>
+        <li><a href="TGD.html">انتقال الأمراض الوراثية</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="content">
+
+      <h1>هدف المشروع </h1>
+      <p>
+        ليس فقط أن نفهم الحمض النووي، بل أن نعيش قصته: أن نستشعر الإبداع في تصميمه، أن نرى كيف يتداخل مع حياتنا اليومية،
+        وأن نُلهم أنفسنا بعظمة الخالق الذي قال: "وَفِي أَنفُسِكُمْ أَفَلَا تُبْصِرُونَ" وأن نفهم أساسيات الحمض النووي
+        وكيفية ترجمة الشيفرة الوراثية إلى بروتينات تشكّل الحياة، وندمج العلوم والهندسة والتكنولوجيا في نموذج مبتكر يسلط
+        الضوء على العلاقة بين هذه التخصصات، ونحفز تفكيرك التحليلي والابتكار من خلال تصميم أدوات أو تطبيقات عملية لفهم
+        الحمض النووي بشكل أعمق، لإلهامك لاكتشاف جمال العلوم وتقدير تداخلها المدهش في الحياة اليومية.
+
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+  </script>
+</body>
+
+</html>

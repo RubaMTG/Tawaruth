@@ -1,0 +1,400 @@
+/* إعدادات الصفحة العامة */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('img/PHOTO-2025-04-27-14-15-02.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  background-position: center;
+}
+
+/* إعدادات الهيدر */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+
+  border-radius: 10px;
+
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  margin-left: 10px;
+  border-radius: 50px;
+}
+
+.site-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 10px;
+  color: white;
+}
+
+.site-name .arabic-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.site-name .english-name {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.site-name hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid white;
+  margin: 5px 0;
+}
+
+.menu-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* إعدادات القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(25, 87, 95, 0.95);
+  padding: 20px;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.sidebar.open {
+  right: 0;
+  opacity: 1;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.sidebar li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.sidebar ul ul {
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.sidebar ul ul li {
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color:white;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* إعدادات البحث */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%; /* تصغير عرض خانة البحث */
+  max-width: 400px; /* تحديد الحد الأقصى للعرض */
+  background-color: rgba(225, 225, 225, 0.897); /* خلفية شفافة */
+  border-radius: 25px; /* زوايا مستديرة */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  padding: 5px; /* مسافة داخلية */
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 12px; /* تصغير الحواف الداخلية */
+  border: none;
+  border-radius: 25px 0 0 25px; /* زوايا مستديرة على اليسار */
+  outline: none;
+  font-size: 14px; /* تصغير حجم النص */
+  background-color: transparent; /* خلفية شفافة */
+  color: #022441; /* لون النص */
+}
+
+.search-bar button {
+  padding: 8px 16px; /* تصغير الحواف الداخلية */
+  border: none;
+  background-color: #326092; /* لون الزر */
+  color: #ffffff;
+  border-radius: 50%; /* جعل الزر دائريًا */
+  cursor: pointer;
+  font-size: 14px; /* تصغير حجم النص */
+  width: 40px; /* عرض الزر */
+  height: 40px; /* ارتفاع الزر */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3; /* لون عند التمرير */
+  transform: scale(1.1); /* تكبير بسيط عند التمرير */
+}
+
+.search-bar button:hover {
+  background-color: #0056b3; /* لون عند التمرير */
+  transform: scale(1.05); /* تكبير بسيط عند التمرير */
+}
+
+/* إعدادات الكروت */
+.course-card {
+  flex: 0 0 calc(50% - 20px);
+  background: #e6e3e3;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(1.05px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border-bottom: 12px;
+}
+
+.course-card h3 {
+  font-size: 22px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.course-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.course-card .btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: #73968a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.3s ease,transform 0.3s ease;
+}
+
+.course-card .btn:hover {
+  background-color: #406790;
+  transform: scale(1.1);
+}
+
+/* إعدادات Slider */
+.slider-container {
+  position: relative;
+  width: 90%; /* عرض الـ Slider */
+  overflow: hidden;
+  margin: 40px auto; /* توسيط الـ Slider */
+  border-radius: 15px; /* زوايا مستديرة للـ Slider */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* ظل جميل */
+  background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+  backdrop-filter: blur(10px);
+}
+.slider-wrapper{
+  overflow: hidden;
+  width: 100%;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease,transform 0.3s ease;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+/*responsive card width*/
+.course-card{
+  min-width: 300px;
+  max-width: 300px;
+  margin: 10px;
+
+}
+
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(14, 14, 14, 0.522); /* خلفية شفافة */
+  border-radius: 10px; /* زوايا مستديرة */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  backdrop-filter: blur(10px); /* تأثير التمويه */
+  text-align: justify; /* محاذاة النصوص */
+  line-height: 1.8; /* تحسين المسافة بين الأسطر */
+  color: #fff; /* لون النص */
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* زوايا مستديرة للصورة */
+  margin-bottom: 20px; /* مسافة بين الصورة والنص */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل للصورة */
+}
+
+.content h1 {
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(104, 101, 112, 0.452); /* خلفية داكنة */
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto; /* إضافة تمرير إذا كانت القائمة طويلة */
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #225e9a;
+}
+.menu-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.2); /* تكبير الزر عند التمرير */
+}
+.intro {
+  text-align: center; /* محاذاة النص إلى المنتصف */
+  margin: 20px auto; /* إضافة مسافة حول النص */
+  padding: 20px; /* مسافة داخلية */
+  background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+  border-radius: 10px; /* زوايا مستديرة */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  color: #fff; /* لون النص */
+}
+
+.intro h1 {
+  font-size: 28px; /* حجم النص الرئيسي */
+  margin-bottom: 10px; /* مسافة أسفل العنوان */
+}
+
+.intro h3 {
+  font-size: 20px; /* حجم النص الفرعي */
+  margin-bottom: 10px; /* مسافة أسفل النص */
+}
+
+.intro p {
+  font-size: 16px; /* حجم النص */
+  line-height: 1.8; /* تحسين المسافة بين الأسطر */
+  color: #ddd; /* لون النص */
+}
